@@ -1,3 +1,10 @@
 app/bin/
 app/obj/
 app/Properties/launchSettings.json
+example/
+jenkins/master/
+jenkins/slave/
+tests/integration/obj/
+tests/integration/bin/
+tests/unit/bin/
+tests/unit/obj/
