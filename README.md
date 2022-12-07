@@ -36,3 +36,5 @@ To create this project, we had to install additional plugins
 Source of groovy scripts: https://github.com/CodeMazeBlog/docker-series/tree/docker-series-continuous-integration-jenkins-end/jenkins-docker/master
 
 Guide to dotnet core CI with Jenkins: https://code-maze.com/ci-jenkins-docker/
+
+How to create ssh server with ngrok: https://www.endtoend.ai/tutorial/ngrok-ssh-forwarding/
