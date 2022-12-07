@@ -4,8 +4,11 @@ We wanna create a pipeline which will build an app, start unit and integration t
 
 ## Structure of the Project
 app -> default dotnet application as sample to build and deploy
-app/tests -> samples for unit and integration tests, just some tests with 100% passing
+
+tests -> samples for unit and integration tests, just some tests with 100% passing
+
 Jenkinsfile -> pipeline script
+
 docker-compose -> starts up Jenkins with all required settings
 
 ## Run Jenkins 
