@@ -7,7 +7,7 @@ USER root
 # Just for my sanity... Show me this distro information!
 RUN uname -a && cat /etc/*release
 
-COPY ./dotnet-install.sh ./dotnet-install.sh
+# COPY ./dotnet-install.sh ./dotnet-install.sh
 
 # RUN chmod +x ./dotnet-install.sh
 

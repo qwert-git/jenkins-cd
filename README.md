@@ -1,19 +1,33 @@
 # Continuose Delivery with Jenkins
-The goal of this pet project is to setup simple CD pipeline with Jenkins.
-The future pipeline should consists of next steps: build, unit tests, integration tests, deploy.
+The goal is to setup simple CD pipeline with Jenkins for .NET Core application.
+We wanna create a pipeline which will build an app, start unit and integration tests, and deploy it to the remove server.
 
-### Infrastructure
-- docker compose file
-- asp.net core app
-- ms sql database
+## Structure of the Project
+app -> default dotnet application as sample to build and deploy
+app/tests -> samples for unit and integration tests, just some tests with 100% passing
+Jenkinsfile -> pipeline script
+docker-compose -> starts up Jenkins with all required settings
 
-
-## How To
-1. Create jenkins-master image
+## Run Jenkins 
+1. With the docker compose
 ```
-    cd /jenkins/master/
-    docker build -t jenkins-master .
+    docker compose up -d
 ```
+
+Or build the image with the commands
+```
+    cd /jenkins_with_dotnet/
+    docker build -t jenkins .
+```
+
+## Pipeline Setup
+Pipeline was set up based on the script. The script itself could be found in the Jenkinsfile at the root of the project.
+It consists of Checkout, Build, Unit Tests, Integration Tests, Publishing steps.
+
+## Plagins
+To create this project, we had to install additional plugins
+* .NET SDK Support
+* Publish Over SSH
 
 ## Helpful References
 Source of groovy scripts: https://github.com/CodeMazeBlog/docker-series/tree/docker-series-continuous-integration-jenkins-end/jenkins-docker/master

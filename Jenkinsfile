@@ -33,6 +33,11 @@ pipeline {
             }
         }
         
-        
+        stage('Deploy') {
+            steps {
+                sshPublisher(
+                    publishers: [sshPublisherDesc(configName: 'kali1', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'mkdir command', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '**/**')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+            }
+        }
     }
 }
